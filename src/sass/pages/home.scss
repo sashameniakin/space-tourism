@@ -1,0 +1,53 @@
+@import "../abstract/variables";
+@import "../base/typography";
+
+.back-home {
+  background-image: url("../../assets/images/home/background-home-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 20;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: auto 165px 132px;
+
+  div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: $sec-color-2;
+    width: 37%;
+  }
+}
+
+.circle {
+  width: 274px;
+  height: 274px;
+  border-radius: 100%;
+  background-color: $sec-color-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: "EXPLORE";
+    color: $base-color;
+    font-size: 32px;
+    font-family: $Bellefair;
+    letter-spacing: 2px;
+    line-height: 36.67px;
+  }
+  &:hover {
+    outline-width: 88px;
+    outline-color: rgba(255, 255, 255, 0.1);
+    outline-style: solid;
+    cursor: pointer;
+  }
+}
