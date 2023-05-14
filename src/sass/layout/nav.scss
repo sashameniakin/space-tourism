@@ -1,8 +1,58 @@
 @import "../base/typography";
+@import "../abstract/variables";
 
-.nav {
+section {
+  display: flex;
+  gap: 48px;
+  padding: 38px 165px 38px 123px;
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
 }
 
-div {
-  background-color: black;
+.link {
+  color: $sec-color-2;
+  text-decoration: none;
+
+  div {
+    display: flex;
+    gap: 14px;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+  &:hover {
+    text-decoration-line: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 38px;
+  }
+}
+
+.active {
+  text-decoration-line: underline;
+  text-decoration-color: rgba(255, 255, 255);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 38px;
+}
+
+.linie {
+  background-color: $sec-color-2;
+  height: 1px;
+  width: 473px;
+  opacity: 25%;
+  margin-right: -30px;
+  margin-left: 64px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+
+  img {
+    margin-left: 55px;
+  }
 }
