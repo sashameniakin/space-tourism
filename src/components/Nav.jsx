@@ -10,7 +10,7 @@ export default function Nav() {
     <div className="nav">
       <img src="./images/logo.svg" alt="logo" />
       <div className="linie" />
-      <section>
+      <section className="nav-container">
         <Link
           to="/"
           className={`${location.pathname === "/" ? "link active" : "link"}`}
