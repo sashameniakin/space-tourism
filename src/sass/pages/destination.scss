@@ -1,3 +1,6 @@
+@import "../abstract/variables";
+@import "../base/typography";
+
 .back-destination {
   background-image: url("../../assets/images/destination/background-destination-desktop.jpg");
   background-size: cover;
@@ -5,4 +8,76 @@
   background-position: center;
   z-index: 20;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  color: $sec-color-2;
+  margin-left: 166px;
+  margin-top: 76px;
+}
+
+.list {
+  display: flex;
+  gap: 36px;
+  color: $sec-color-1;
+  p {
+    &:hover {
+      cursor: pointer;
+      text-decoration-line: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.5);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 12px;
+    }
+  }
+}
+
+.active-home {
+  color: $sec-color-2;
+  text-decoration-line: underline;
+  text-decoration-color: rgba(255, 255, 255);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 12px;
+}
+
+.container {
+  display: flex;
+  padding: 64px 11.3% 64px 16%;
+  gap: 10.9%;
+  align-items: center;
+
+  /*   img {
+    width: 100%;
+  } */
+
+  article {
+    color: $sec-color-2;
+  }
+}
+
+.mini-container {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+.text {
+  border-bottom: 1px solid rgba(56, 59, 75, 1);
+  padding-bottom: 54px;
+}
+
+.container-down {
+  display: flex;
+  gap: 79px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    p:first-child {
+      padding-top: 28px;
+    }
+  }
 }
