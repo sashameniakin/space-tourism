@@ -33,18 +33,23 @@ export default function Planet() {
 
   return (
     <section className="container">
-      <img
-        src={`${
-          moon
-            ? "./images/destination/image-moon.webp"
-            : mars
-            ? "./images/destination/image-mars.webp"
-            : europa
-            ? "./images/destination/image-europa.webp"
-            : "./images/destination/image-titan.webp"
-        }`}
-        alt="planet"
-      />
+      <div className="planet-container">
+        <h5>
+          <span>01</span> PICK YOUR DESTINATION
+        </h5>
+        <img
+          src={`${
+            moon
+              ? "./images/destination/image-moon.webp"
+              : mars
+              ? "./images/destination/image-mars.webp"
+              : europa
+              ? "./images/destination/image-europa.webp"
+              : "./images/destination/image-titan.webp"
+          }`}
+          alt="planet"
+        />
+      </div>
       <section className="mini-container">
         <div className="list nav_text">
           <p className={`${moon ? "active-home" : ""}`} onClick={handleMoon}>

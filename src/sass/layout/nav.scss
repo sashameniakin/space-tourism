@@ -1,5 +1,6 @@
 @import "../base/typography";
 @import "../abstract/variables";
+@import "../abstract/mixins";
 
 .nav-container {
   display: flex;
@@ -24,18 +25,12 @@
   }
 
   &:hover {
-    text-decoration-line: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.5);
-    text-decoration-thickness: 3px;
-    text-underline-offset: 38px;
+    @include underline(underline, rgba(255, 255, 255, 0.5), 3px, 38px);
   }
 }
 
 .active {
-  text-decoration-line: underline;
-  text-decoration-color: rgba(255, 255, 255);
-  text-decoration-thickness: 3px;
-  text-underline-offset: 38px;
+  @include underline(underline, rgba(255, 255, 255), 3px, 38px);
 }
 
 .linie {
