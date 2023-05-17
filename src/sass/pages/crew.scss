@@ -1,8 +1,82 @@
+@import "../base/typography";
+@import "../abstract/variables";
+
 .back-crew {
   background-image: url("../../assets/images/crew/background-crew-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 20;
-  height: 100vh;
+}
+
+.crew {
+  display: flex;
+  justify-content: space-between;
+  /*  align-items: center; */
+  margin-left: 165px;
+  margin-right: 137px;
+  gap: 1%;
+  /*   height: 100vh; */
+
+  img {
+    align-self: flex-end;
+  }
+
+  div {
+    /*  width: 50%; */
+    h5 {
+      padding-bottom: 75px;
+      padding-top: 76px;
+      color: $sec-color-2;
+      span {
+        opacity: 25%;
+      }
+    }
+    h4 {
+      color: $sec-color-2;
+      opacity: 50%;
+      padding-bottom: 15px;
+    }
+    h3 {
+      color: $sec-color-2;
+      padding-bottom: 27px;
+    }
+    p {
+      padding-bottom: 120px;
+      width: 430px;
+      min-height: 280px;
+    }
+  }
+}
+
+.switch {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 94px;
+
+  div {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 50%;
+    }
+  }
+}
+
+.not-active-crew {
+  background-color: $sec-color-2;
+  opacity: 17%;
+}
+
+.active-crew {
+  background-color: $sec-color-2;
+  opacity: 100%;
+}
+
+.foto {
+  align-self: flex-end;
+  height: 80%;
 }

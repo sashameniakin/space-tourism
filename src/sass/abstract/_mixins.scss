@@ -1,0 +1,6 @@
+@mixin underline($line, $color, $thickness, $offset) {
+  text-decoration-line: $line;
+  text-decoration-color: $color;
+  text-decoration-thickness: $thickness;
+  text-underline-offset: $offset;
+}
