@@ -41,7 +41,6 @@ h5 {
   letter-spacing: 4.75px;
   font-weight: 400;
   margin: 0;
-  color: $sec-color-1;
 }
 
 .sub_h1 {
@@ -64,13 +63,13 @@ h5 {
   line-height: 19.2px;
   letter-spacing: 2.7px;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .body_text {
   font-family: $Barlow;
   font-size: 18px;
   line-height: 32px;
-  text-align: justify;
   letter-spacing: 1px;
   font-weight: 400;
   color: $sec-color-1;

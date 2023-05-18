@@ -34,9 +34,6 @@ export default function Member() {
   return (
     <section className="crew">
       <div>
-        <h5>
-          <span>02</span> MEET YOUR CREW
-        </h5>
         <h4>{`${
           commander
             ? "COMMANDER"
@@ -85,20 +82,22 @@ export default function Member() {
           />
         </section>
       </div>
-      {/*   <div className="foto"> */}
-      <img
-        src={`${
-          commander
-            ? "./images/crew/image-douglas-hurley.webp"
-            : spec
-            ? "./images/crew/image-mark-shuttleworth.webp"
-            : pilot
-            ? "./images/crew/image-victor-glover.webp"
-            : "./images/crew/image-anousheh-ansari.webp"
-        }`}
-        alt="crew member"
-      />
-      {/*   </div> */}
+      <div
+        className={`${pilot ? "foto-pilot" : engineer ? "foto-engi" : "foto"}`}
+      >
+        <img
+          src={`${
+            commander
+              ? "./images/crew/image-douglas-hurley.webp"
+              : spec
+              ? "./images/crew/image-mark-shuttleworth.webp"
+              : pilot
+              ? "./images/crew/image-victor-glover.webp"
+              : "./images/crew/image-anousheh-ansari.webp"
+          }`}
+          alt="crew member"
+        />
+      </div>
     </section>
   );
 }

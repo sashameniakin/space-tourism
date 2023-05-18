@@ -1,6 +1,41 @@
+@import "../abstract/variables";
+
 @mixin underline($line, $color, $thickness, $offset) {
   text-decoration-line: $line;
   text-decoration-color: $color;
   text-decoration-thickness: $thickness;
   text-underline-offset: $offset;
+}
+
+@mixin content($number) {
+  content: $number;
+  font-size: 32px;
+  font-family: $Bellefair;
+  letter-spacing: 2px;
+  line-height: 36.67px;
+}
+
+@mixin background($url) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  background-image: url($url);
+}
+
+@mixin h5() {
+  margin-top: 76px;
+  margin-left: 11%;
+  color: $sec-color-2;
+
+  span {
+    opacity: 25%;
+  }
+}
+
+@mixin container() {
+  display: flex;
+  margin-left: 11%;
+  align-items: center;
+  justify-content: space-between;
 }

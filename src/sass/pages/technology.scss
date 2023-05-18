@@ -1,8 +1,92 @@
+@import "../abstract/variables";
+@import "../base/typography";
+@import "../abstract/mixins";
+
 .back-technology {
-  background-image: url("../../assets/images/technology/background-technology-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 20;
-  height: 100vh;
+  @include background(
+    "../../assets/images/technology/background-technology-desktop.jpg"
+  );
+
+  h5 {
+    margin-bottom: 26px;
+    @include h5();
+  }
+}
+
+.container-launch {
+  @include container();
+}
+
+.descr {
+  min-height: 162px;
+  width: 67%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  div {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: $base_color;
+    color: $sec-color-2;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div:first-child {
+    &:before {
+      @include content("1");
+    }
+  }
+
+  .active-circle {
+    background-color: $sec-color-2;
+    color: $base_color;
+  }
+
+  div:nth-child(2) {
+    &:before {
+      @include content("2");
+    }
+  }
+  div:nth-child(3) {
+    &:before {
+      @include content("3");
+    }
+  }
+}
+
+.small-container-left {
+  display: flex;
+  gap: 10%;
+  align-items: center;
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    color: $sec-color-1;
+    padding-bottom: 11px;
+  }
+  h3 {
+    color: $sec-color-2;
+    padding-bottom: 17px;
+  }
+}
+
+.resp-image-container {
+  width: 100%;
+  max-width: 515px;
+  max-height: 527px;
+
+  img {
+    width: 100%;
+  }
 }

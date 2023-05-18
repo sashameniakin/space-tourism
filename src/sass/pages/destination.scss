@@ -3,25 +3,23 @@
 @import "../abstract/mixins";
 
 .back-destination {
-  background-image: url("../../assets/images/destination/background-destination-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
+  @include background(
+    "../../assets/images/destination/background-destination-desktop.jpg"
+  );
+
   display: flex;
   flex-direction: column;
+  h5 {
+    margin-bottom: 64px;
+    @include h5();
+  }
 }
 
 .container {
-  display: flex;
-  /* padding: 64px 6.3% 64px 10%; */
-  margin-top: 76px;
-  margin-bottom: 112px;
-  margin-left: 165px;
-  margin-right: 165px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 157px;
+  @include container();
+
+  margin-bottom: 100px;
+  margin-right: 11%;
 
   article {
     color: $sec-color-2;
@@ -29,17 +27,11 @@
 }
 
 .planet-container {
-  display: flex;
-  flex-direction: column;
-
-  h5 {
-    color: $sec-color-2;
-    padding-bottom: 96px;
-    span {
-      opacity: 25%;
-    }
-  }
+  width: 100%;
+  max-width: 445px;
+  max-height: 445px;
   img {
+    width: 100%;
     padding-left: 50px;
   }
 }
@@ -64,7 +56,6 @@
 .mini-container {
   display: flex;
   flex-direction: column;
-  margin-top: 104px;
   gap: 37px;
   width: 40%;
 }

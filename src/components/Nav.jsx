@@ -17,7 +17,7 @@ export default function Nav() {
         >
           <div>
             <p className="nav_text">
-              <span>00 &nbsp;</span>HOME
+              <span>00 </span>HOME
             </p>
           </div>
         </Link>
@@ -30,7 +30,7 @@ export default function Nav() {
         >
           <div>
             <p className="nav_text">
-              <span>01 &nbsp;</span>DESTINATION
+              <span>01 </span>DESTINATION
             </p>
           </div>
         </Link>
@@ -42,7 +42,7 @@ export default function Nav() {
         >
           <div>
             <p className="nav_text">
-              <span>02 &nbsp;</span>CREW
+              <span>02 </span>CREW
             </p>
           </div>
         </Link>
@@ -54,7 +54,7 @@ export default function Nav() {
         >
           <div>
             <p className="nav_text">
-              <span>03 &nbsp;</span>TECHNOLOGY
+              <span>03 </span>TECHNOLOGY
             </p>
           </div>
         </Link>
