@@ -3,10 +3,8 @@
 @import "../abstract/mixins";
 
 .back-technology {
-  @include background(
-    "../../assets/images/technology/background-technology-desktop.jpg"
-  );
-
+  @include background();
+  background-image: url("../../assets/images/technology/background-technology-desktop.jpg");
   h5 {
     margin-bottom: 26px;
     @include h5();
@@ -18,8 +16,8 @@
 }
 
 .descr {
-  min-height: 162px;
-  width: 67%;
+  /*   min-height: 228px;*/
+  width: 70%;
 }
 
 .button-container {
@@ -83,8 +81,8 @@
 
 .resp-image-container {
   width: 100%;
-  max-width: 515px;
-  max-height: 527px;
+  max-width: 500px;
+  max-height: 510px;
 
   img {
     width: 100%;

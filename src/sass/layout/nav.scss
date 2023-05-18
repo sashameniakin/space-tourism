@@ -9,6 +9,10 @@
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
   width: 57%;
+  @include tabletBreakPoint() {
+    padding: 38px 46px 38px 48px;
+    width: 60%;
+  }
 }
 
 .link {
@@ -22,6 +26,9 @@
 
   span {
     font-weight: 700;
+    @include tabletBreakPoint() {
+      display: none;
+    }
   }
 
   &:hover {
@@ -34,6 +41,9 @@
 }
 
 .linie {
+  @include tabletBreakPoint() {
+    display: none;
+  }
   background-color: $sec-color-2;
   height: 1px;
   width: 473px;
@@ -48,7 +58,14 @@
   align-items: center;
   padding-top: 40px;
 
+  @include tabletBreakPoint() {
+    padding-top: 0;
+  }
+
   img {
     margin-left: 55px;
+    @include tabletBreakPoint() {
+      margin-left: 39px;
+    }
   }
 }

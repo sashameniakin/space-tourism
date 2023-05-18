@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 
 //fonts
 
 $Bellefair: "Bellefair", serif;
-$Barlow: "Barlow Condensed", sans-serif;
+$Barlow: "Barlow", sans-serif;
+$Barlow-Condensed: "Barlow Condensed", sans-serif;
 
 //colors
 
@@ -12,3 +13,6 @@ $sec-color-1: #d0d6f9;
 $sec-color-2: #ffffff;
 
 //screen sizes
+
+$tablet: 820px;
+$mobile: 375px;

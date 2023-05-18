@@ -1,4 +1,5 @@
 @import "../abstract/variables";
+@import "../abstract/mixins";
 
 /* FONTS */
 
@@ -8,6 +9,9 @@ h1 {
   line-height: 171.9px;
   font-weight: 400;
   margin: 0;
+  @include tabletBreakPoint() {
+    line-height: 150px;
+  }
 }
 
 h2 {
@@ -35,12 +39,18 @@ h4 {
 }
 
 h5 {
-  font-family: $Barlow;
+  font-family: $Barlow-Condensed;
   font-size: 28px;
   line-height: 33.6px;
   letter-spacing: 4.75px;
   font-weight: 400;
   margin: 0;
+
+  @include tabletBreakPoint() {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.38px;
+  }
 }
 
 .sub_h1 {
@@ -50,7 +60,7 @@ h5 {
 }
 
 .sub_h2 {
-  font-family: $Barlow;
+  font-family: $Barlow-Condensed;
   font-size: 14px;
   line-height: 16.8px;
   letter-spacing: 2.36px;
@@ -58,7 +68,7 @@ h5 {
 }
 
 .nav_text {
-  font-family: $Barlow;
+  font-family: $Barlow-Condensed;
   font-size: 16px;
   line-height: 19.2px;
   letter-spacing: 2.7px;
@@ -70,7 +80,11 @@ h5 {
   font-family: $Barlow;
   font-size: 18px;
   line-height: 32px;
-  letter-spacing: 1px;
   font-weight: 400;
   color: $sec-color-1;
+
+  @include tabletBreakPoint() {
+    font-size: 16px;
+    line-height: 28px;
+  }
 }

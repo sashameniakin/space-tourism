@@ -15,12 +15,11 @@
   line-height: 36.67px;
 }
 
-@mixin background($url) {
+@mixin background() {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  background-image: url($url);
 }
 
 @mixin h5() {
@@ -38,4 +37,15 @@
   margin-left: 11%;
   align-items: center;
   justify-content: space-between;
+}
+
+@mixin tabletBreakPoint {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobileBreakPoint {
+  @media (max-width: $mobile) {
+    @content;
+  }
 }
