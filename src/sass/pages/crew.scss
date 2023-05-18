@@ -1,37 +1,22 @@
 @import "../base/typography";
 @import "../abstract/variables";
+@import "../abstract/mixins";
 
 .back-crew {
-  background-image: url("../../assets/images/crew/background-crew-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 20;
+  @include background("../../assets/images/crew/background-crew-desktop.jpg");
+
+  h5 {
+    margin-bottom: 120px;
+    @include h5();
+  }
 }
 
 .crew {
-  display: flex;
-  justify-content: space-between;
-  /*  align-items: center; */
-  margin-left: 165px;
-  margin-right: 137px;
-  gap: 1%;
-  /*   height: 100vh; */
+  @include container();
 
-  img {
-    align-self: flex-end;
-  }
+  margin-right: 9%;
 
   div {
-    /*  width: 50%; */
-    h5 {
-      padding-bottom: 75px;
-      padding-top: 76px;
-      color: $sec-color-2;
-      span {
-        opacity: 25%;
-      }
-    }
     h4 {
       color: $sec-color-2;
       opacity: 50%;
@@ -43,8 +28,8 @@
     }
     p {
       padding-bottom: 120px;
-      width: 430px;
-      min-height: 280px;
+      width: 70%;
+      min-height: 250px;
     }
   }
 }
@@ -52,7 +37,7 @@
 .switch {
   display: flex;
   gap: 24px;
-  padding-bottom: 94px;
+  margin-bottom: 78px;
 
   div {
     width: 15px;
@@ -78,5 +63,28 @@
 
 .foto {
   align-self: flex-end;
-  height: 80%;
+  width: 70%;
+  margin-top: -170px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.foto-pilot {
+  align-self: flex-end;
+  margin-top: -250px;
+  width: 110%;
+  img {
+    width: 100%;
+  }
+}
+
+.foto-engi {
+  align-self: flex-end;
+  margin-top: -250px;
+  width: 110%;
+  img {
+    width: 100%;
+  }
 }

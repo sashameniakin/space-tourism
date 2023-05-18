@@ -34,9 +34,6 @@ export default function Planet() {
   return (
     <section className="container">
       <div className="planet-container">
-        <h5>
-          <span>01</span> PICK YOUR DESTINATION
-        </h5>
         <img
           src={`${
             moon

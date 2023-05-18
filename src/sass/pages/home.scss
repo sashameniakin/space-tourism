@@ -1,13 +1,10 @@
 @import "../abstract/variables";
 @import "../base/typography";
+@import "../abstract/mixins";
 
 .back-home {
-  background-image: url("../../assets/images/home/background-home-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 20;
-  height: 100vh;
+  @include background("../../assets/images/home/background-home-desktop.jpg");
+
   display: flex;
   flex-direction: column;
 }
