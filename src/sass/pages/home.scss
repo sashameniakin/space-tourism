@@ -3,28 +3,53 @@
 @import "../abstract/mixins";
 
 .back-home {
-  @include background("../../assets/images/home/background-home-desktop.jpg");
-
+  @include background();
+  @include tabletBreakPoint() {
+    background-image: url("../../assets/images/home/background-home-tablet.jpg");
+  }
+  @include mobileBreakPoint() {
+    background-image: url("../../assets/images/home/background-home-mobile.jpg");
+  }
+  background-image: url("../../assets/images/home/background-home-desktop.jpg");
   display: flex;
   flex-direction: column;
 }
 
 .main-part {
+  @include tabletBreakPoint() {
+    flex-direction: column;
+    margin: 106px 159px 90px;
+    align-items: center;
+  }
   display: flex;
   justify-content: space-between;
   align-items: end;
   margin: auto 165px 132px;
+
+  h5 {
+    color: $sec-color-1;
+  }
 
   div:first-child {
     display: flex;
     flex-direction: column;
     gap: 24px;
     color: $sec-color-2;
-    width: 37%;
+    max-width: 45%;
+    @include tabletBreakPoint() {
+      max-width: 450px;
+      align-items: center;
+      padding-bottom: 156px;
+      text-align: center;
+    }
   }
 }
 
 .circle {
+  @include tabletBreakPoint() {
+    width: 242px;
+    height: 242px;
+  }
   width: 274px;
   height: 274px;
   border-radius: 100%;

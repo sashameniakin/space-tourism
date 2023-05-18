@@ -3,8 +3,8 @@
 @import "../abstract/mixins";
 
 .back-crew {
-  @include background("../../assets/images/crew/background-crew-desktop.jpg");
-
+  @include background();
+  background-image: url("../../assets/images/crew/background-crew-desktop.jpg");
   h5 {
     margin-bottom: 120px;
     @include h5();
