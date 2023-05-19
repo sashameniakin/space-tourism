@@ -83,7 +83,15 @@ export default function Member() {
         </section>
       </div>
       <div
-        className={`${pilot ? "foto-pilot" : engineer ? "foto-engi" : "foto"}`}
+        className={`${
+          pilot
+            ? "foto-pilot"
+            : engineer
+            ? "foto-engi"
+            : spec
+            ? "foto-spec"
+            : "foto"
+        }`}
       >
         <img
           src={`${
