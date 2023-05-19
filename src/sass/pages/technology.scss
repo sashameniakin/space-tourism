@@ -5,25 +5,56 @@
 .back-technology {
   @include background();
   background-image: url("../../assets/images/technology/background-technology-desktop.jpg");
+  @include tabletBreakPoint() {
+    background-image: url("../../assets/images/technology/background-technology-tablet.jpg");
+  }
+  @include mobileBreakPoint() {
+    background-image: url("../../assets/images/technology/background-technology-mobile.jpg");
+  }
+
   h5 {
     margin-bottom: 26px;
     @include h5();
+
+    @include tabletBreakPoint() {
+      margin-bottom: 60px;
+      margin-top: 40px;
+      margin-left: 38.5px;
+    }
   }
 }
 
 .container-launch {
   @include container();
+
+  @include tabletBreakPoint() {
+    flex-direction: column-reverse;
+    margin-right: 0%;
+    margin-left: 0%;
+  }
 }
 
 .descr {
   /*   min-height: 228px;*/
   width: 70%;
+
+  @include tabletBreakPoint() {
+    text-align: center;
+    width: 60%;
+  }
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include tabletBreakPoint() {
+    flex-direction: row;
+    gap: 16px;
+    padding-top: 56px;
+    padding-bottom: 44px;
+  }
 
   div {
     width: 80px;
@@ -35,11 +66,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tabletBreakPoint() {
+      width: 60px;
+      height: 60px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 1);
+    }
   }
 
   div:first-child {
     &:before {
       @include content("1");
+
+      @include tabletBreakPoint() {
+        font-size: 24px;
+        letter-spacing: 1.5px;
+        line-height: 27.5px;
+      }
     }
   }
 
@@ -51,11 +98,23 @@
   div:nth-child(2) {
     &:before {
       @include content("2");
+
+      @include tabletBreakPoint() {
+        font-size: 24px;
+        letter-spacing: 1.5px;
+        line-height: 27.5px;
+      }
     }
   }
   div:nth-child(3) {
     &:before {
       @include content("3");
+
+      @include tabletBreakPoint() {
+        font-size: 24px;
+        letter-spacing: 1.5px;
+        line-height: 27.5px;
+      }
     }
   }
 }
@@ -65,9 +124,17 @@
   gap: 10%;
   align-items: center;
 
+  @include tabletBreakPoint() {
+    flex-direction: column;
+  }
+
   article {
     display: flex;
     flex-direction: column;
+
+    @include tabletBreakPoint() {
+      align-items: center;
+    }
   }
   p {
     color: $sec-color-1;
@@ -83,6 +150,11 @@
   width: 100%;
   max-width: 500px;
   max-height: 510px;
+
+  @include tabletBreakPoint() {
+    max-width: none;
+    max-height: none;
+  }
 
   img {
     width: 100%;

@@ -57,16 +57,28 @@ export default function Launch() {
         </div>
       </div>
       <div className="resp-image-container">
-        <img
-          src={`${
-            first
-              ? "./images/technology/image-launch-vehicle-portrait.jpg"
-              : second
-              ? "./images/technology/image-spaceport-portrait.jpg"
-              : "./images/technology/image-space-capsule-portrait.jpg"
-          }`}
-          alt="technology-bild"
-        />
+        <picture>
+          <source
+            media="(min-width:769px)"
+            srcSet={`${
+              first
+                ? "./images/technology/image-launch-vehicle-portrait.jpg"
+                : second
+                ? "./images/technology/image-spaceport-portrait.jpg"
+                : "./images/technology/image-space-capsule-portrait.jpg"
+            }`}
+          />
+          <img
+            src={`${
+              first
+                ? "./images/technology/image-launch-vehicle-landscape.jpg"
+                : second
+                ? "./images/technology/image-spaceport-landscape.jpg"
+                : "./images/technology/image-space-capsule-landscape.jpg"
+            }`}
+            alt="technology-bild"
+          />
+        </picture>
       </div>
     </section>
   );

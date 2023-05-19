@@ -5,31 +5,70 @@
 .back-crew {
   @include background();
   background-image: url("../../assets/images/crew/background-crew-desktop.jpg");
+  @include tabletBreakPoint() {
+    background-image: url("../../assets/images/crew/background-crew-tablet.jpg");
+  }
+  @include mobileBreakPoint() {
+    background-image: url("../../assets/images/crew/background-crew-mobile.jpg");
+  }
+
   h5 {
     margin-bottom: 120px;
     @include h5();
+
+    @include tabletBreakPoint() {
+      margin-bottom: 60px;
+      margin-top: 40px;
+      margin-left: 38.5px;
+    }
   }
 }
 
 .crew {
   @include container();
 
+  @include tabletBreakPoint() {
+    flex-direction: column;
+    margin-right: 0%;
+    margin-left: 0%;
+  }
+
   margin-right: 9%;
 
   div {
+    @include tabletBreakPoint() {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     h4 {
       color: $sec-color-2;
       opacity: 50%;
       padding-bottom: 15px;
+
+      @include tabletBreakPoint() {
+        padding-bottom: 8px;
+      }
     }
     h3 {
       color: $sec-color-2;
       padding-bottom: 27px;
+
+      @include tabletBreakPoint() {
+        padding-bottom: 16px;
+      }
     }
     p {
       padding-bottom: 120px;
       width: 70%;
       min-height: 250px;
+
+      @include tabletBreakPoint() {
+        width: 80%;
+        min-height: auto;
+        text-align: center;
+        padding-bottom: 40px;
+      }
     }
   }
 }
@@ -39,10 +78,20 @@
   gap: 24px;
   margin-bottom: 78px;
 
+  @include tabletBreakPoint() {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
   div {
     width: 15px;
     height: 15px;
     border-radius: 100%;
+
+    @include tabletBreakPoint() {
+      width: 10px;
+      height: 10px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -66,6 +115,29 @@
   width: 70%;
   margin-top: -170px;
 
+  @include tabletBreakPoint() {
+    margin-top: 0px;
+    align-self: center;
+    width: 51%;
+    margin-left: 80px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.foto-spec {
+  align-self: flex-end;
+  width: 70%;
+  margin-top: -170px;
+
+  @include tabletBreakPoint() {
+    margin-top: 0px;
+    align-self: center;
+    width: 47%;
+  }
+
   img {
     width: 100%;
   }
@@ -75,6 +147,13 @@
   align-self: flex-end;
   margin-top: -250px;
   width: 110%;
+
+  @include tabletBreakPoint() {
+    margin-top: 0px;
+    align-self: center;
+    width: 59%;
+  }
+
   img {
     width: 100%;
   }
@@ -84,6 +163,13 @@
   align-self: flex-end;
   margin-top: -250px;
   width: 110%;
+
+  @include tabletBreakPoint() {
+    margin-top: 0px;
+    align-self: center;
+    width: 66%;
+  }
+
   img {
     width: 100%;
   }
