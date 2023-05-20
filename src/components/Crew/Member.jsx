@@ -34,6 +34,25 @@ export default function Member() {
   return (
     <section className="crew">
       <div>
+        <div className="crew-linie" />
+        <section className="switch-mobile">
+          <div
+            className={`${commander ? "active-crew" : "not-active-crew"}`}
+            onClick={handleCommander}
+          />
+          <div
+            className={`${spec ? "active-crew" : "not-active-crew"}`}
+            onClick={handleSpec}
+          />
+          <div
+            className={`${pilot ? "active-crew" : "not-active-crew"}`}
+            onClick={handlePilot}
+          />
+          <div
+            className={`${engineer ? "active-crew" : "not-active-crew"}`}
+            onClick={handleEngineer}
+          />
+        </section>
         <h4>{`${
           commander
             ? "COMMANDER"

@@ -1,0 +1,34 @@
+@import "../abstract/variables";
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 121px;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  z-index: 10;
+}
+
+.menu-inside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding-left: 32px;
+}
+
+.menu-link {
+  color: $sec-color-2;
+  text-decoration: none;
+
+  h5 {
+    margin-bottom: 0;
+
+    span {
+      font-weight: 700;
+      opacity: 100%;
+    }
+  }
+}

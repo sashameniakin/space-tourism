@@ -4,12 +4,15 @@
 
 .back-home {
   @include background();
+
   @include tabletBreakPoint() {
     background-image: url("../../assets/images/home/background-home-tablet.jpg");
   }
+
   @include mobileBreakPoint() {
     background-image: url("../../assets/images/home/background-home-mobile.jpg");
   }
+
   background-image: url("../../assets/images/home/background-home-desktop.jpg");
   display: flex;
   flex-direction: column;
@@ -21,6 +24,11 @@
     margin: 106px 159px 90px;
     align-items: center;
   }
+
+  @include mobileBreakPoint() {
+    margin: 48px 24px 48px;
+  }
+
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -36,11 +44,17 @@
     gap: 24px;
     color: $sec-color-2;
     max-width: 45%;
+
     @include tabletBreakPoint() {
       max-width: 450px;
       align-items: center;
       padding-bottom: 156px;
       text-align: center;
+    }
+
+    @include mobileBreakPoint() {
+      padding-bottom: 77px;
+      gap: 16px;
     }
   }
 }
@@ -50,6 +64,12 @@
     width: 242px;
     height: 242px;
   }
+
+  @include mobileBreakPoint() {
+    width: 150px;
+    height: 150px;
+  }
+
   width: 274px;
   height: 274px;
   border-radius: 100%;
@@ -65,8 +85,22 @@
     font-family: $Bellefair;
     letter-spacing: 2px;
     line-height: 36.67px;
+
+    @include mobileBreakPoint() {
+      font-size: 20px;
+      line-height: 22.92px;
+      letter-spacing: 1.25px;
+    }
   }
   &:hover {
+    @include tabletBreakPoint() {
+      outline-width: 60px;
+    }
+
+    @include mobileBreakPoint() {
+      outline-width: 40px;
+    }
+
     outline-width: 88px;
     outline-color: rgba(255, 255, 255, 0.1);
     outline-style: solid;
