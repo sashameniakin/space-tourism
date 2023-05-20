@@ -5,6 +5,7 @@
 .back-crew {
   @include background();
   background-image: url("../../assets/images/crew/background-crew-desktop.jpg");
+
   @include tabletBreakPoint() {
     background-image: url("../../assets/images/crew/background-crew-tablet.jpg");
   }
@@ -16,10 +17,21 @@
     margin-bottom: 120px;
     @include h5();
 
+    span {
+      font-weight: 700;
+    }
+
     @include tabletBreakPoint() {
       margin-bottom: 60px;
       margin-top: 40px;
       margin-left: 38.5px;
+    }
+
+    @include mobileBreakPoint() {
+      margin-bottom: 32px;
+      margin-top: 24px;
+      margin-left: 0px;
+      text-align: center;
     }
   }
 }
@@ -34,6 +46,10 @@
   }
 
   margin-right: 9%;
+
+  @include mobileBreakPoint() {
+    flex-direction: column-reverse;
+  }
 
   div {
     @include tabletBreakPoint() {
@@ -69,6 +85,11 @@
         text-align: center;
         padding-bottom: 40px;
       }
+
+      @include mobileBreakPoint() {
+        padding-bottom: 107px;
+        width: 88%;
+      }
     }
   }
 }
@@ -82,6 +103,9 @@
     gap: 16px;
     margin-bottom: 40px;
   }
+  @include mobileBreakPoint() {
+    display: none;
+  }
 
   div {
     width: 15px;
@@ -92,6 +116,32 @@
       width: 10px;
       height: 10px;
     }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 50%;
+    }
+  }
+}
+
+.switch-mobile {
+  display: none;
+
+  @include tabletBreakPoint() {
+    display: none;
+  }
+
+  @include mobileBreakPoint() {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+
+  div {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
 
     &:hover {
       cursor: pointer;
@@ -120,6 +170,13 @@
     align-self: center;
     width: 51%;
     margin-left: 80px;
+  }
+
+  @include mobileBreakPoint() {
+    margin-top: 0px;
+    align-self: center;
+    width: 51%;
+    margin-left: 30px;
   }
 
   img {
@@ -172,5 +229,19 @@
 
   img {
     width: 100%;
+  }
+}
+
+.crew-linie {
+  display: none;
+
+  @include tabletBreakPoint() {
+    display: none;
+  }
+
+  @include mobileBreakPoint() {
+    width: 327px;
+    height: 1px;
+    background: rgba(56, 59, 75, 1);
   }
 }

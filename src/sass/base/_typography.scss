@@ -9,8 +9,14 @@ h1 {
   line-height: 171.9px;
   font-weight: 400;
   margin: 0;
+
   @include tabletBreakPoint() {
     line-height: 150px;
+  }
+
+  @include mobileBreakPoint() {
+    font-size: 80px;
+    line-height: 100px;
   }
 }
 
@@ -25,6 +31,11 @@ h2 {
     font-size: 80px;
     line-height: 91.68px;
   }
+
+  @include mobileBreakPoint() {
+    font-size: 56px;
+    line-height: 64.18px;
+  }
 }
 
 h3 {
@@ -38,6 +49,11 @@ h3 {
     font-size: 40px;
     line-height: 45.84px;
   }
+
+  @include mobileBreakPoint() {
+    font-size: 24px;
+    line-height: 27.5px;
+  }
 }
 
 h4 {
@@ -50,6 +66,11 @@ h4 {
   @include tabletBreakPoint() {
     font-size: 24px;
     line-height: 27.5px;
+  }
+
+  @include mobileBreakPoint() {
+    font-size: 16px;
+    line-height: 18.34px;
   }
 }
 
@@ -65,6 +86,12 @@ h5 {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 3.38px;
+  }
+
+  @include mobileBreakPoint() {
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
   }
 }
 
@@ -89,6 +116,12 @@ h5 {
   letter-spacing: 2.7px;
   font-weight: 400;
   white-space: nowrap;
+
+  @include mobileBreakPoint() {
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 2.36px;
+  }
 }
 
 .body_text {
@@ -101,5 +134,10 @@ h5 {
   @include tabletBreakPoint() {
     font-size: 16px;
     line-height: 28px;
+  }
+
+  @include mobileBreakPoint() {
+    font-size: 15px;
+    line-height: 25px;
   }
 }

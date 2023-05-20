@@ -18,10 +18,21 @@
     margin-bottom: 64px;
     @include h5();
 
+    span {
+      font-weight: 700;
+    }
+
     @include tabletBreakPoint() {
       margin-bottom: 60px;
       margin-top: 40px;
       margin-left: 38.5px;
+    }
+
+    @include mobileBreakPoint() {
+      margin-bottom: 32px;
+      margin-top: 24px;
+      margin-left: 0px;
+      text-align: center;
     }
   }
 }
@@ -38,8 +49,15 @@
   margin-bottom: 100px;
   margin-right: 11%;
 
+  @include mobileBreakPoint() {
+    margin-bottom: 58px;
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+
   article {
     color: $sec-color-2;
+
     @include tabletBreakPoint() {
       text-align: center;
     }
@@ -57,6 +75,12 @@
     margin-bottom: 53px;
   }
 
+  @include mobileBreakPoint() {
+    max-width: 170px;
+    max-height: 170px;
+    margin-bottom: 26px;
+  }
+
   img {
     width: 100%;
     padding-left: 50px;
@@ -70,11 +94,19 @@
 .list {
   display: flex;
   gap: 36px;
+
+  @include mobileBreakPoint() {
+    gap: 26px;
+  }
   color: $sec-color-1;
   p {
     &:hover {
       cursor: pointer;
       @include underline(underline, rgba(255, 255, 255, 0.5), 3px, 12px);
+
+      @include mobileBreakPoint() {
+        @include underline(underline, rgba(255, 255, 255, 0.5), 3px, 8px);
+      }
     }
   }
 }
@@ -82,6 +114,10 @@
 .active-home {
   color: $sec-color-2;
   @include underline(underline, rgba(255, 255, 255), 3px, 12px);
+
+  @include mobileBreakPoint() {
+    @include underline(underline, rgba(255, 255, 255), 3px, 8px);
+  }
 }
 
 .mini-container {
@@ -95,6 +131,10 @@
     align-items: center;
     gap: 47px;
   }
+
+  @include mobileBreakPoint() {
+    gap: 31px;
+  }
 }
 
 .text {
@@ -105,6 +145,11 @@
     padding-bottom: 49px;
     padding-top: 8px;
   }
+
+  @include mobileBreakPoint() {
+    padding-bottom: 32px;
+    padding-top: 1px;
+  }
 }
 
 .container-down {
@@ -113,6 +158,12 @@
 
   @include tabletBreakPoint() {
     justify-content: center;
+  }
+
+  @include mobileBreakPoint() {
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 32px;
   }
 
   div {
@@ -126,6 +177,21 @@
 
     p:first-child {
       padding-top: 28px;
+
+      @include mobileBreakPoint() {
+        padding-top: 0px;
+      }
+    }
+  }
+}
+
+.menu-link {
+  h5 {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    span {
+      opacity: 100%;
     }
   }
 }

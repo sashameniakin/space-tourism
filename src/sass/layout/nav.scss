@@ -9,9 +9,14 @@
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
   width: 57%;
+
   @include tabletBreakPoint() {
     padding: 38px 46px 38px 48px;
     width: 60%;
+  }
+
+  @include mobileBreakPoint() {
+    display: none;
   }
 }
 
@@ -26,6 +31,7 @@
 
   span {
     font-weight: 700;
+
     @include tabletBreakPoint() {
       display: none;
     }
@@ -44,6 +50,11 @@
   @include tabletBreakPoint() {
     display: none;
   }
+
+  @include mobileBreakPoint() {
+    display: none;
+  }
+
   background-color: $sec-color-2;
   height: 1px;
   width: 473px;
@@ -62,10 +73,39 @@
     padding-top: 0;
   }
 
-  img {
+  @include mobileBreakPoint() {
+    padding-top: 24px;
+  }
+
+  picture {
     margin-left: 55px;
+
     @include tabletBreakPoint() {
       margin-left: 39px;
     }
+
+    @include mobileBreakPoint() {
+      margin-left: 24px;
+    }
   }
+}
+
+.hamburger {
+  display: none;
+
+  @include tabletBreakPoint() {
+    display: none;
+  }
+
+  @include mobileBreakPoint() {
+    display: block;
+    margin-right: 24px;
+  }
+}
+
+.close {
+  align-self: flex-end;
+  padding-top: 33.95px;
+  padding-right: 26.45px;
+  padding-bottom: 64.95px;
 }
